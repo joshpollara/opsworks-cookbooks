@@ -15,7 +15,7 @@ end
 
 bash 'install_php' do
   code <<-EOH
-    tar xzf /tmp/php-7.0.3.tar.gz
+    tar xzf /tmp/php-7.0.3.tar.gz -C /tmp/php-7.0.3
     cd /tmp/php-7.0.3
     ./configure
     make
