@@ -40,7 +40,5 @@ cookbook_file '/etc/sudoers.d/chris' do
   only_if 'test -d /etc/sudoers.d'
 end
 
-# install packages
-package 'htop' do
-  action :install
-end
+# install packages defined in ../attributes/default.rb
+include_recipe 'packages::default'

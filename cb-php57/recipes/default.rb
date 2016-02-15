@@ -7,14 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# dependencies
-packages = [ 'libjpeg62-dev', 'libpng-dev' 'libfreetype6-dev', 'libssh2-1-dev', 'libssh2-1' ]
-packages.each do |package_name|
-  package package_name do
-    action :install
-  end
-end
-
 # download and install php
 remote_file '/tmp/php-7.0.3.tar.gz' do
   source 'http://nl3.php.net/get/php-7.0.3.tar.gz/from/this/mirror'
