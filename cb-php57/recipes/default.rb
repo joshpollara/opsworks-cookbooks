@@ -27,4 +27,9 @@ bash 'install_php' do
   action :nothing
 end
 
-# pecl install php-ssh2
+# pecl
+execute 'pecl_ssh2_install' do
+  command '/usr/local/bin/pecl install ssh2'
+  action :run
+  not_if '/usr/local/bin/pecl list | grep ssh2'
+end
