@@ -9,8 +9,8 @@
 
 # dependencies
 packages = [ 'libjpeg62-dev', 'libpng-dev' 'libfreetype6-dev', 'libssh2-1-dev', 'libssh2-1' ]
-packages.each do |pkg|
-  package pkg do
+packages.each do |package_name|
+  package package_name do
     action :install
   end
 end
