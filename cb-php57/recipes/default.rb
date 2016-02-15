@@ -26,10 +26,3 @@ bash 'install_php' do
     EOH
   action :nothing
 end
-
-# pecl
-execute 'pecl_ssh2_install' do
-  command '/usr/local/bin/pecl install channel://pecl.php.net/ssh2-0.12'
-  action :run
-  not_if '/usr/local/bin/pecl list | grep ssh2'
-end

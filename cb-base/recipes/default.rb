@@ -7,6 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# cloudwatch monitoring
+include_recipe 'cloudwatch_monitoring::default'
+
 # add users
 user 'chris' do
   supports :manage_home => true
