@@ -34,7 +34,7 @@ file '/home/chris/.ssh/authorized_keys' do
 end
 
 # set up /etc/sudoers.d/
-file '/etc/sudoers.d/chris'
+file '/etc/sudoers.d/chris' do
   source 'chris-sudoers'
   owner 'root'
   group 'root'
