@@ -25,7 +25,7 @@ directory '/home/chris/.ssh' do
   only_if 'test -d /home/chris'
 end
 
-file '/home/chris/.ssh/authorized_keys' do
+cookbook_file '/home/chris/.ssh/authorized_keys' do
   source 'chris-authorized_keys'
   owner 'chris'
   group 'chris'
@@ -34,7 +34,7 @@ file '/home/chris/.ssh/authorized_keys' do
 end
 
 # set up /etc/sudoers.d/
-file '/etc/sudoers.d/chris' do
+cookbook_file '/etc/sudoers.d/chris' do
   source 'chris-sudoers'
   owner 'root'
   group 'root'
