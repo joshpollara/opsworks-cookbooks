@@ -11,8 +11,6 @@
 user 'chris' do
   supports :manage_home => true
   comment 'Chris'
-  uid '20000'
-  gid '20000'
   home '/home/chris'
   shell '/bin/bash'
 end
