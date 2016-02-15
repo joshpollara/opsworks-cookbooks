@@ -40,5 +40,8 @@ cookbook_file '/etc/sudoers.d/chris' do
   only_if 'test -d /etc/sudoers.d'
 end
 
-# install packages defined in ../attributes/default.rb
-include_recipe 'packages::default'
+# install packages
+Chef::Log.info "packages:#{node['packages']}"
+node['packages'].each do |pkg|
+  package pkg
+end
