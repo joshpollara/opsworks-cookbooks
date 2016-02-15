@@ -10,3 +10,7 @@
 package 'uwsgi' do
   action :install
 end
+
+service 'uwsgi' do
+  action [ :enable, :start ]
+end
